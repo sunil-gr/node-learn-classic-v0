@@ -1,0 +1,13 @@
+<h1>Session</h1>
+
+<% if (!currentUser) { %>
+  You are not logged in yet.
+  <form method="POST" action="/session/simple">
+    <input type="submit" name="submit" value="Login" />
+  </form>
+<% } else { %>
+  Hello <%= currentUser %>
+  <form method="POST" action="/session/simple">
+    <input type="submit" name="submit" value="Logout" />
+  </form>
+<% } %> 

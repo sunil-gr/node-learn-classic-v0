@@ -1,0 +1,37 @@
+<h1>Loops</h1>
+<p>For loop (0 to 5):</p>
+<% for(let i = 0; i <= 5; i++) { %>
+  <p>This is my first text</p>
+<% } %>
+
+<hr/>
+
+<p>For loop with step 2 (0 to 5):</p>
+<% for(let i = 0; i <= 5; i += 2) { %>
+  <p>This is my second text</p>
+<% } %>
+
+<hr/>
+
+<p>For loop with index:</p>
+<% for(let i = 0; i <= 5; i++) { %>
+  <p>Current text index is <%= i %></p>
+<% } %>
+
+<hr/>
+
+<p>Do-while equivalent:</p>
+<% let index4 = 0; %>
+<% do { %>
+  <p>Current text index is <%= index4 %></p>
+  <% index4++; %>
+<% } while(index4 < 6); %>
+
+<hr/>
+
+<p>Nested loops (table):</p>
+<% for(let row = 0; row <= 1; row++) { %>
+  <% for(let col = 0; col <= 1; col++) { %>
+    <p>Table row:<%= row %> col:<%= col %></p>
+  <% } %>
+<% } %> 

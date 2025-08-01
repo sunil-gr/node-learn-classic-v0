@@ -1,0 +1,11 @@
+<h1>Server Variable</h1>
+<table class="uk-table uk-table-divider">
+  <tbody>
+  <% Object.keys(serverVariables).forEach(function(key) { %>
+    <tr>
+      <td><%= key %></td>
+      <td><%= serverVariables[key] %></td>
+    </tr>
+  <% }); %>
+  </tbody>
+</table> 

@@ -1,0 +1,61 @@
+<h1 class="uk-title">Database Update</h1>
+
+<h3 class="uk-title">Update Post</h3>
+<form class="uk-form-stacked" method="POST" action="/database/update">
+  <div>
+    <label class="uk-form-label">Post ID</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" type="text" name="id" placeholder="Enter post ID" />
+      <i class="uk-text-danger"><%= idMessage || '' %></i>
+    </div>
+  </div>
+  <div>
+    <label class="uk-form-label">Title</label>
+    <div class="uk-form-controls">
+      <input class="uk-input" type="text" name="title" />
+      <i class="uk-text-danger"><%= titleMessage || '' %></i>
+    </div>
+  </div>
+  <div>
+    <label class="uk-form-label">Content</label>
+    <div class="uk-form-controls">
+      <textarea class="uk-textarea" type="text" name="content"></textarea>
+      <i class="uk-text-danger"><%= contentMessage || '' %></i>
+    </div>
+  </div>
+  <div>
+    <label class="uk-form-label">Status</label>
+    <div class="uk-form-controls">
+      <label><input class="uk-radio" type="radio" name="status" value="published"> Published</label><br>
+      <label><input class="uk-radio" type="radio" name="status" value="draft"> Draft</label><br>
+    </div>
+  </div>
+  <div class="uk-margin">
+    <input type="submit" name="submit" class="uk-button uk-button-primary" value="Update" >
+      <i class="uk-text-success"><%= submitMessage || '' %></i>
+  </div>
+</form>
+
+<h3 class="uk-title">List of Posts</h3>
+<table class="uk-table uk-table-divider">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if (posts && posts.length > 0) { %>
+      <% posts.forEach(function(post) { %>
+      <tr>
+        <td><%= post.ID %></td>
+        <td><%= post.Title %></td>
+        <td><%= post.Content %></td>
+        <td><%= post.Status %></td>
+      </tr>
+      <% }); %>
+    <% } %>
+  </tbody>
+</table> 

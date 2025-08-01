@@ -1,0 +1,10 @@
+<h1>POST Form with Validation</h1>
+<% if (errors && errors.length) { %>
+  <ul style="color:red;">
+    <% errors.forEach(function(error) { %><li><%= error %></li><% }); %>
+  </ul>
+<% } %>
+<form method="post" action="/forms/post-validation">
+  <label>Name: <input type="text" name="name" value="<%= values.name || '' %>" /></label>
+  <button type="submit">Submit</button>
+</form> 

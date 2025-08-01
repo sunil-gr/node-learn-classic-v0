@@ -1,0 +1,33 @@
+<h1>Array</h1>
+<%
+  const names = "Kim,Mook,Jun,Sung";
+  const namesSplit = names.split(",");
+  const cars = ["Kim","Mook","Jun","Sung"];
+%>
+
+<h3>Fruits</h3>
+<p><%= namesSplit[0] %></p>
+<p><%= namesSplit[1] %></p>
+<p><%= namesSplit[2] %></p>
+<p><%= namesSplit[3] %></p>
+<hr/>
+
+<h3>Cars</h3>
+<p><%= cars[0] %></p>
+<p><%= cars[1] %></p>
+<p><%= cars[2] %></p>
+<p><%= cars[3] %></p>
+
+<!-- print by array index using loop -->
+<hr/>
+<h3>Names</h3>
+<% for(let i = 0; i < namesSplit.length; i++) { %>
+  <p><%= namesSplit[i] %></p>
+<% } %>
+
+<!-- print by array index using loop -->
+<hr/>
+<h3>Cars</h3>
+<% for(let i = 0; i < cars.length; i++) { %>
+  <p><%= cars[i] %></p>
+<% } %> 

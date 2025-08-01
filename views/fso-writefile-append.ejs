@@ -1,0 +1,14 @@
+<h1>Write File Append</h1>
+
+<form method="POST" action="/filesystem/writefile-append">
+  <p>Filename: <input type="text" name="filename" value="cities.txt" /></p>
+  <p>Content:</p>
+  <textarea name="content" rows="4" cols="50">This is my updated sentence.
+written at <%= new Date().toLocaleString() %></textarea>
+  <br/>
+  <button type="submit">Append to File</button>
+</form>
+
+<% if (message) { %>
+  <p><%= message %></p>
+<% } %> 
